@@ -1,0 +1,51 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+
+body {
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bg-animation {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e, #ff1493);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass-container {
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0 10%;
+}
+
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493;
+    margin-top: 20vh;
+}
+
+.glow-btn {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #ff1493;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff1493;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.glow-btn:hover { background: #ff1493; transform: scale(1.1); }
