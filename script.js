@@ -1,7 +1,5 @@
-document.addEventListener('mousemove', (e) => {
-    const stars = document.getElementById('stars');
-    let x = e.clientX;
-    let y = e.clientY;
-    stars.style.transform = `translate(${x/50}px, ${y/50}px)`;
-});
-
+body { background: #0d1117; color: white; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.glass-card { background: rgba(139, 69, 19, 0.1); backdrop-filter: blur(10px); border: 1px solid #D2B48C; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 0 20px #8B4513; }
+.glow { color: #D2B48C; text-shadow: 0 0 10px #D2B48C; }
+.console-box { background: #000; padding: 1rem; border-radius: 10px; margin: 1rem 0; min-width: 300px; border-left: 4px solid #D2B48C; }
+.skills-grid span { font-size: 0.7rem; border: 1px solid #8B4513; padding: 4px 8px; margin: 2px; display: inline-block; border-radius: 5px; }
