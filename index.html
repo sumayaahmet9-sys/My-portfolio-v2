@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haniita | Systems Architect</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glass-card">
-        <h1 class="glow">Haniita_OS v2.0</h1>
-        <div class="console-box">
-            <code id="terminal">Initializing...</code>
+    <div class="main-frame">
+        <div class="profile-box">
+            <img src="haniita.jpg" alt="Haniita" class="neon-avatar">
+            <h1 class="title">Haniita_<span>OS</span></h1>
         </div>
-        <div class="skills-grid">
-            <span>Python</span> <span>Java</span> <span>C++</span> 
-            <span>C#</span> <span>JS</span> <span>HTML</span> <span>CSS</span>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="lang-label" id="lang-name">Python</span>
+            </div>
+            <div class="terminal-body">
+                <pre><code id="code-display"></code></pre>
+            </div>
+        </div>
+
+        <div class="badges">
+            <span>PYTHON</span><span>JAVA</span><span>C++</span><span>C#</span>
+            <span>JS</span><span>HTML</span><span>CSS</span>
         </div>
     </div>
     <script src="script.js"></script>
