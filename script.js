@@ -1,18 +1,25 @@
-const codes = [
-    "print('Hello from Python AI')",         // Python
-    "System.out.println('Java Backend')",    // Java
-    "std::cout << 'C++ Systems Access';",    // C++
-    "Console.WriteLine('C# .NET Active');",  // C#
-    "console.log('JS Interface Ready');",    // JS
-    "<h1>HTML5 Structure OK</h1>",           // HTML
-    "body { color: Neon-Brown; }"            // CSS
+const projectData = [
+    { name: "PYTHON", code: "print('Hello World: AI Logic Active')" },
+    { name: "JAVA", code: "System.out.println('Backend Operational');" },
+    { name: "C++", code: "std::cout << 'Hardware Interface Ready';" },
+    { name: "C#", code: "Console.WriteLine('.NET Core Systems');" },
+    { name: "JAVASCRIPT", code: "console.log('UI/UX Rendered Successfully');" },
+    { name: "HTML", code: "<h1>System Structure: 100%</h1>" },
+    { name: "CSS", code: ".body { theme: 'Neon-Earthy-Brown'; }" }
 ];
 
-let i = 0;
-const terminal = document.getElementById('terminal');
+let index = 0;
+const codeElem = document.getElementById('code-display');
+const langElem = document.getElementById('lang-name');
 
-setInterval(() => {
-    terminal.innerText = codes[i];
-    i = (i + 1) % codes.length;
-}, 2000);
+function updateTerminal() {
+    const current = projectData[index];
+    langElem.innerText = current.name;
+    codeElem.innerText = current.code;
+    
+    index = (index + 1) % projectData.length;
+}
 
+// Update every 3 seconds
+setInterval(updateTerminal, 3000);
+updateTerminal();
