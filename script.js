@@ -1,5 +1,18 @@
-body { background: #0d1117; color: white; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.glass-card { background: rgba(139, 69, 19, 0.1); backdrop-filter: blur(10px); border: 1px solid #D2B48C; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 0 20px #8B4513; }
-.glow { color: #D2B48C; text-shadow: 0 0 10px #D2B48C; }
-.console-box { background: #000; padding: 1rem; border-radius: 10px; margin: 1rem 0; min-width: 300px; border-left: 4px solid #D2B48C; }
-.skills-grid span { font-size: 0.7rem; border: 1px solid #8B4513; padding: 4px 8px; margin: 2px; display: inline-block; border-radius: 5px; }
+const codes = [
+    "print('Hello from Python AI')",         // Python
+    "System.out.println('Java Backend')",    // Java
+    "std::cout << 'C++ Systems Access';",    // C++
+    "Console.WriteLine('C# .NET Active');",  // C#
+    "console.log('JS Interface Ready');",    // JS
+    "<h1>HTML5 Structure OK</h1>",           // HTML
+    "body { color: Neon-Brown; }"            // CSS
+];
+
+let i = 0;
+const terminal = document.getElementById('terminal');
+
+setInterval(() => {
+    terminal.innerText = codes[i];
+    i = (i + 1) % codes.length;
+}, 2000);
+
